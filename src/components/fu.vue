@@ -1,3 +1,3 @@
 <template>
-    <div>hi! fufu!</div>
+    <div>hi one component</div>
 </template>

@@ -1,6 +1,9 @@
 <template>
-  <div>hi</div>
-  <fu />
+  <div>导航栏</div>
+  <router-link to="/">首页</router-link>
+  <router-link to="/2">选项2</router-link>
+  <hr />
+  <router-view/>
 </template>
 
 <script>
