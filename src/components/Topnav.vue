@@ -5,6 +5,7 @@
       <li>菜单1</li>
       <li>菜单2</li>
     </ul>
+    <span class="toggleAside"></span>
   </div>
 </template>
 
@@ -31,6 +32,8 @@ export default{
   > .logo {
     max-width: 6em;
     margin-right: auto;
+    align-items: center;
+    justify-content: center;
   }
   > .menu {
     display: flex;
@@ -40,6 +43,13 @@ export default{
       margin: 0 1em;
     }
   }
+  >.toggleAside{
+    
+  }
+  @media (max-width:500px) {
+  >.menu{display: none;}
+  >.logo{ margin:0 auto}
+}
 }
 
 </style>
