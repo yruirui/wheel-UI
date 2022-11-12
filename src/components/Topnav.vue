@@ -25,10 +25,14 @@ export default{
 <style lang="scss" scoped>
 .topnav {
   background: pink;
-  position: relative;
+  
   z-index: 10;
   display: flex;
   padding: 16px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   > .logo {
     max-width: 6em;
     margin-right: auto;
