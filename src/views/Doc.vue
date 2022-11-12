@@ -1,7 +1,7 @@
 <template >
     <Topnav />
     <div class="content">
-        <aside>
+        <aside v-if="menuVisible">
             <h2>组件列表</h2>
             <ol>
                 <li><router-link to='/doc/switch'>Switch组件</router-link></li>
@@ -15,9 +15,15 @@
 </template>
 
 <script lang="ts" >
+import { inject, Ref } from 'vue'
 import Topnav from '../components/Topnav.vue'
 export default{
-    components:{Topnav}
+    components:{Topnav},
+    setup(){
+      const menuVisible=inject<Ref<boolean>>('menuVisible')
+      return {menuVisible}
+    }
+    
 }
 </script>
 
