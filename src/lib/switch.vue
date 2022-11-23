@@ -12,10 +12,7 @@ export default ({
     },
     setup(props,context) {
        const toggle = () =>{ 
-       
-        console.log('props'+props.value)
         context.emit('input',!props.value)
-        console.log('props'+props.value)
        }
        return{toggle}
     },
