@@ -1,9 +1,10 @@
 <template>
     <div>this is button</div>
     <h1>示例1</h1>
-    <Button @click="onClick"
-    @focus="onClick"
-    @mouseover="onClick"> hi</Button>
+    <Button theme=""> hi</Button>
+    <Button theme="button"> hi</Button>
+    <Button theme="link"> hi</Button>
+    <Button theme="text"> hi</Button>
 </template>
 <script>
 import Button from '../lib/Button.vue'
