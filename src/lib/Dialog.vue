@@ -3,7 +3,9 @@
     <div class="gulu-dialog-overlay"></div>
     <div class="gulu-dialog-wrapper">
         <div class="gulu-dialog">
-        <header>标题</header>
+        <header>标题         
+            <span @click="close" class="gulu-dialog-close"></span>
+        </header>
         <main>
             <p>one</p>
             <p>two</p>
@@ -27,7 +29,13 @@ export default{
             default:false
         }
     },
-    components:{ Button}
+    components:{ Button},
+    setup(props,context){
+        const close=()=>{
+            context.emit('update:visible',false)
+        }
+        return{close}
+    }
 }
 </script>
 
@@ -72,16 +80,32 @@ $border-color:#d9d9d9;
 >footer{
     border-top:1px solid $border-color;
     padding:12px 16px;
-    text-align:right;
+    text-align:right;}
 &-close{
     position:relative;
     display: inline-block;
     width: 16px;
     height: 16px;
     cursor:pointer;
+
+    &::before,&::after{
+        content:'';
+        position:absolute;
+        height:1px;
+        background: black;
+        width:100%;
+        top:50%;
+        left: 50%;
+    }
+    &::before {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+    &::after {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
 }
 }
 
-}
+
 
 </style>

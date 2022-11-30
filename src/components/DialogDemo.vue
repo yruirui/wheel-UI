@@ -1,7 +1,7 @@
 <template>
      <h1>示例1</h1>
      <Button @click="toggle">toggle</Button>
-     <Dialog :visible="x"></Dialog>
+     <Dialog :visible="x" @update:visible="x = $event"></Dialog>
 </template>
 
 <script lang="ts">
